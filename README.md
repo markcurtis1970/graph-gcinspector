@@ -1,14 +1,16 @@
 # Graph GCInspector
 
-A simple how to for graphing the GCInspector pause times from Cassandra logs. The output of iostat is useful but its also nice if you can get it into a graph. The idea of this small repository is to show how this is done.
+A simple how to for graphing the GCInspector pause times from Cassandra logs. 
+
+The logs are useful and easy to parse out GC pause times from the cli, but its also nice if you can get it into a graph. The idea of this small repository is to show how this is done.
 
 ## Overview
 
-This repository is simply two scripts; one that parses a set of logs and outputs some data in a given format and one that parses the resulting data and draws some nice graphs. As most of my other repos, this one could probably be very easily improved.
+This repository is simply two scripts; one that parses a set of logs and outputs some data in a given format and one that parses the resulting data and draws some nice graphs.
 
 There's a few things that will need to be setup beforehand though, see below for details on this. Note this was all tested on MacOS. It _should_ work just fine on Linux, it's probably not going to work on MS Windows, sorry!
 
-Its best to use this to run against a set of logs *one node at a time* since the output will not distinguish which node the GC pause times are from
+Its best to use this to run against a set of logs *one node at a time* since the output will not distinguish which node the GC pause times are from.
 
 ## Setup
 
@@ -28,7 +30,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 ### Install GNU Plot
 
+```
 brew install gnuplot
+```
 
 ## Creating the data
 
@@ -48,7 +52,7 @@ You'll generate 3 files like so:
 -rw-r--r--   1 mark  staff       0 26 Feb 13:45 cms.out
 ```
 
-In this example the logs only had G1 events so we only have output in the `g1.out` file. (Note the output names are set in the script but you cna change them eaisly if you like)
+In this example the logs only had G1 events so we only have output in the `g1.out` file. (Note the output names are set in the script but you can change them eaisly if you like)
 
 The content of the file should look something like this:
 
