@@ -69,5 +69,4 @@ $ ./graph-gcs.sh g1.out JVM_g1.png
 procesing g1.out for GCs, plotting JVM_g1.png
 ```
 
-
-
+![alt example](https://github.com/markcurtis1970/graph-gcinspector/blob/master/example.png)
