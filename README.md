@@ -69,4 +69,8 @@ $ ./graph-gcs.sh g1.out JVM_g1.png
 procesing g1.out for GCs, plotting JVM_g1.png
 ```
 
+## Example output
+
+Here's an example output from a set of logs from a node running G1 GC
+
 ![alt example](https://github.com/markcurtis1970/graph-gcinspector/blob/master/example.png)
